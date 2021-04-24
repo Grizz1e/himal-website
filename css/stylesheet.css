@@ -13,6 +13,26 @@
 	color: #fff;
 }
 
+.slide-up {
+	width: 100%;
+	overflow: hidden;
+	margin-left: 400px;
+	max-width: 500px
+}
+
+.navs {
+	margin: 1em 80em 1em 1em;
+}
+
+.navs-home:hover, .navs-commands:hover, .navs-about:hover {
+	font-weight: bold
+}
+
+.current {
+	font-weight: bold;
+	border-bottom: 3px solid rgb(44, 140, 230)
+}
+
 .child {
 	display: flex;
 }
@@ -65,7 +85,6 @@ a {
 .row {
 	display: flex;
 	flex-wrap: wrap;
-	margin-top: 10%;
 	justify-content: space-between;
 	background: #B94CCC;
 }
@@ -87,8 +106,12 @@ a {
 }
 
 .logo1 {
-	width: 55%;
+	/*width: 55%;*/
 	margin: 8%;
+	display: block;
+	-webkit-animation: avatar-bounce-data-v-7aff31a0 2.4s ease-in-out infinite alternate;
+	animation: avatar-bounce-data-v-7aff31a0 2.4s ease-in-out infinite alternate;
+	width: 22.5vw;
 }
 
 .col-2 p {
@@ -118,7 +141,6 @@ a {
 
 .logo {
 	width: 100px;
-	padding-right: 2%;
 }
 
 .logo1 {
@@ -138,6 +160,10 @@ a {
 	border: none;
 	margin-right: 70px;
 	width: 90px;
+}
+
+.dropbtn:hover {
+	cursor: pointer;
 }
 
 .dropdown {
@@ -217,6 +243,13 @@ footer {
 	width: 100%;
 	background-color: #2C2F33;
 	height: 30vh;
+}
+
+.botsites {
+	align-items: center;
+	margin-right: 10px;
+	display: flex;
+	align-self: center;
 }
 
 .footer-p {
