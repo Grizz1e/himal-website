@@ -5,10 +5,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Himal | Home</title>
+    <title>Himal | Commands</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.1.2/css/all.css">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="/css/style.css">
 </head>
 
 <body class="bg-gray-600">
@@ -18,7 +18,7 @@
         </div>
         <div class="nav-items text-center text-2xl">
             <ul class="flex text-white justify-between">
-                <li class="px-10"><a href="/commands/">Commands</a></li>
+                <li class="main-page px-10"><a href="/commands">Commands</a></li>
                 <li class="px-10"><a href="/server/" target="_blank">Support</a></li>
                 <li class="px-10"><a href="https://ko-fi.com/Grizz1e" target="_blank">Donate</a></li>
                 <li class="px-10"><a href="https://top.gg/bot/757157859011067985" target="_blank">Vote</a></li>
@@ -28,37 +28,47 @@
     </nav>
     <div class="fixed top-20 right-5 mobile-menu rounded-lg bg-white py-5" id="mobile-menu">
         <ul>
-            <li class="px-10 py-4"><a href="/commands/">Commands</a></li>
+            <li class="px-10 py-4"><a href="/">Commands</a></li>
             <li class="px-10 py-4"><a href="/server/" target="_blank">Support</a></li>
             <li class="px-10 py-4"><a href="https://ko-fi.com/Grizz1e" target="_blank">Donate</a></li>
             <li class="px-10 py-4"><a href="https://top.gg/bot/757157859011067985" target="_blank">Vote</a></li>
         </ul>
     </div>
-    <div class="main-container text-center mt-40 text-4xl font-bold text-white">
-        <div class="main-title mt-4xl">
-            <h1 id="main-title">Himal</h1>
-            <p class="my-9 font-thin text-xl">THE #1 LO-FI MUSIC AND RADIO BOT AVAILABLE ON DISCORD</p>
-            <div class="flex justify-center items-center">
-                <div id="invite-btn">
-                    <a href="https://discord.gg" target="_blank" rel="noopener"><i class="fa-brands fa-discord"></i> Add
-                        Bot!</a>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div id="stats-cards" class="grid grid-cols-3 gap-40 mx-10 my-40 text-white font-bold text-center text-4xl">
-        <div class="stats bg-slate-500 py-10 rounded-3xl">
-            <h1 id="server-count"></h1>
-            <p>Active Servers</p>
-        </div>
-        <div class="stats bg-slate-500 py-10 rounded-3xl">
-            <h1 id="user-count"></h1>
-            <p>Total Users</p>
-        </div>
-        <div class="stats bg-slate-500 py-10 rounded-3xl">
-            <h1 id="radio-count"></h1>
-            <p>Radio Stations</p>
-        </div>
+    <div class="main-container flex my-20 justify-center text-3xl">
+        <table border="1px">
+            <tr>
+                <th>Commands</th>
+                <th>Description</th>
+            </tr>
+            <tr>
+                <td><code>/play</code></td>
+                <td>Plays a Lo-Fi radio station</td>
+            </tr>
+            <tr>
+                <td><code>/radio</code></td>
+                <td>Plays the given radio station</td>
+            </tr>
+            <tr>
+                <td><code>/zen</code></td>
+                <td>Plays a zen music</td>
+            </tr>
+            <tr>
+                <td><code>/stop</code></td>
+                <td>Stops the current session</td>
+            </tr>
+            <tr>
+                <td><code>/forceplay lofi</code></td>
+                <td>Overrides the current stream by playing Lo-fi</td>
+            </tr>
+            <tr>
+                <td><code>/forceplay radio</code></td>
+                <td>Overrides the current stream by playing given radio station</td>
+            </tr>
+            <tr>
+                <td><code>/forceplay zen</code></td>
+                <td>Overrides the current stream by playing zen music</td>
+            </tr>
+        </table>
     </div>
     <script src="/js/script.js"></script>
 </body>
