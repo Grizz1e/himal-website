@@ -5,65 +5,58 @@
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Himal</title>
-	<link rel="stylesheet" href="/css/main.css">
-	<base href="https://himal.subas123.com.np">
-	<link rel="shortcut icon" type="image/x-icon" href="/assets/himal.png" />
+	<title>404 | Page Not Found</title>
+	<script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.1.2/css/all.css">
+	<link rel="stylesheet" href="/css/style.css">
+	<link rel="shortcut icon" href="/assets/logo.svg" type="image/svg">
+	<script>
+		window.onload = () => {
+			document.getElementById("reload-link").href = window.location.toString();
+		}
+	</script>
+	<style>
+		#home-btn,
+		#reload-btn {
+			border: 5px solid #64748b;
+			padding: 1.25rem 2.5rem;
+			border-radius: 1.5rem;
+			transition: 0.2s linear;
+		}
 
+		#home-btn {
+			color: #64748b;
+			filter: brightness(1.2);
+		}
+
+		#reload-btn {
+			background: rgb(100 116 139);
+		}
+
+		#reload-btn:hover, #home-btn:hover {
+			transform: scale(1.2);
+		}
+		#home-btn:hover {
+			background: rgb(100 116 139);
+			color: white;
+		}
+	</style>
 </head>
 
 <body>
-	<div class="navbar">
-		<div class="container">
-			<a class="logo" href="#"><img src="/assets/himal.png" height="70em" alt="Logo"></a>
-
-			<img id="mobile-cta" class="mobile-menu" src="/assets/menu.svg" alt="Menu">
-
-			<nav>
-				<img id="mobile-exit" class="mobile-menu-exit" src="/assets/exit.svg" alt="Exit">
-				<ul>
-					<li class="current"><a href="#">Home</a></li>
-					<li><a href="/commands/">Commands</a></li>
-					<li><a href="/docs/">Docs</a></li>
-				</ul>
-
-				<ul>
-					<li><a href="#">Vote</a></li>
-					<li class="invite-cta"><a href="https://bit.ly/invite-himal" target="_blank">Invite</a></li>
-				</ul>
-			</nav>
+	<div class="text-center bg-gray-600 w-screen h-screen text-white py-40">
+		<h1 class="font-bold text-9xl">4<i class="fa-solid fa-magnifying-glass fa-sm"></i>4</h1>
+		<p class="text-3xl font-bold">oops! page not found</p>
+		<p class="mb-10">You can reload or return to the homepage</p>
+		<div class="flex justify-center">
+			<div id="reload-btn" class="reload-btn mx-4">
+				<a id="reload-link" class="font-bold text-2xl" href="">Reload</a>
+			</div>
+			<div id="home-btn" class="reload-btn mx-4">
+				<a class="font-bold text-2xl" href="/">Home</a>
+			</div>
 		</div>
 	</div>
-
-	<section class="hero">
-		<div class="container">
-			<div class="left-col">
-				<p clas="subhead">Ooops! You made a mistake!!</p>
-				<h1>404! Page Doesn't Exist</h1>
-
-				<div class="hero-cta">
-					<a href="https://bit.ly/invite-himal" class="primary-cta" target="_blank">Click to Invite</a>
-					<a href="https://discord.gg/48H2Dd4" class="support-server-cta" target="_blank">Support Server</a>
-				</div>
-			</div>
-
-			<img src="/assets/logo.png" class="hero-image" alt="Logo" width="250">
-		</div>
-	</section>
-
-	<script>
-		const mobileBtn = document.getElementById("mobile-cta")
-		nav = document.querySelector("nav")
-		mobileBtnExit = document.getElementById("mobile-exit");
-
-		mobileBtn.addEventListener("click", () => {
-			nav.classList.add("menu-btn");
-		})
-
-		mobileBtnExit.addEventListener("click", () => {
-			nav.classList.remove("menu-btn");
-		})
-	</script>
 </body>
 
 </html>
