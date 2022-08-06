@@ -22,7 +22,7 @@ li,
     transition: 0.2s linear;
 }
 
-li:hover,
+.nav-items li:hover,
 #main-logo:hover {
     transform: scale(1.1);
 }
@@ -76,7 +76,7 @@ tr {
 }
 
 tr:hover {
-    transform: scale(1.1);
+    transform: scale(1.02);
 }
 
 table {
@@ -88,24 +88,40 @@ table {
     display: none;
 }
 
-@media (max-width: 900px) {
+@media (max-width: 1160px) and (min-width: 1050px) {
+    #stats-cards {
+        font-size: x-large;
+    }
+}
+
+@media (max-width: 1050px) {
     #stats-cards {
         display: grid;
         grid-template-columns: 1fr;
     }
 }
+
 @media (max-width: 850px) {
     .nav-items {
         display: none;
     }
+
     #ham-menu {
         display: flex;
     }
 }
+
 .mobile-menu {
     display: none;
     background: white;
+    z-index: 40;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.364);
 }
+
 .is-visible {
     display: block;
+}
+
+.mobile-menu li:hover {
+    background: whitesmoke;
 }
