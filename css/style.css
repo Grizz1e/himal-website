@@ -1,7 +1,17 @@
+:root {
+    --primary-color: #4b5563;
+    --secondary-color: #64748b;
+}
+body {
+    background: var(--primary-color);
+}
+nav {
+    background: var(--secondary-color);
+}
 #invite-btn {
-    border: 4px solid rgb(100 116 139);
+    border: 4px solid var(--secondary-color);
     border-radius: 1.5rem;
-    color: rgb(100 116 139);
+    color: var(--secondary-color);
     transition: 0.2s linear;
     padding: 1.25rem 2.5rem;
     filter: brightness(1.2);
@@ -9,7 +19,7 @@
 
 #invite-btn:hover {
     color: white;
-    background: rgb(100 116 139);
+    background: var(--secondary-color);
     transform: scale(1.2);
 }
 
@@ -32,6 +42,7 @@ li,
 }
 
 .stats {
+    background: var(--secondary-color);
     transition: 0.2s linear;
 }
 
