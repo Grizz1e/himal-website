@@ -28,7 +28,7 @@
     <link rel="shortcut icon" href="/assets/logo.svg" type="image/svg">
 </head>
 
-<body class="bg-gray-600">
+<body class="bg-gray-600 overflow-hidden overflow-y-scroll">
     <nav class="flex sticky justify-between items-center w-screen h-16 bg-slate-500 px-10 top-0 z-10">
         <div class="flex nav-header justify-center items-center">
             <a href="/"><img id="main-logo" src="/assets/logo.svg" alt="Himal Logo"></a>
@@ -51,45 +51,101 @@
             <li class="px-10 py-4"><a href="https://top.gg/bot/757157859011067985" target="_blank">Vote</a></li>
         </ul>
     </div>
-    <div class="main-container flex my-20 justify-center text-3xl">
-        <table border="1px">
-            <tr>
-                <th>Commands</th>
-                <th>Description</th>
-            </tr>
-            <tr>
-                <td><code>/play</code></td>
-                <td>Plays a Lo-Fi radio station</td>
-            </tr>
-            <tr>
-                <td><code>/radio</code></td>
-                <td>Plays the given radio station</td>
-            </tr>
-            <tr>
-                <td><code>/zen</code></td>
-                <td>Plays a zen music</td>
-            </tr>
-            <tr>
-                <td><code>/stop</code></td>
-                <td>Stops the current session</td>
-            </tr>
-            <tr>
-                <td><code>/forceplay lofi</code></td>
-                <td>Overrides the current stream by playing Lo-fi</td>
-            </tr>
-            <tr>
-                <td><code>/forceplay radio</code></td>
-                <td>Overrides the current stream by playing given radio station</td>
-            </tr>
-            <tr>
-                <td><code>/forceplay zen</code></td>
-                <td>Overrides the current stream by playing zen music</td>
-            </tr>
-            <tr>
-                <td><code>/stats</code></td>
-                <td>Shows current statistics about the bot</td>
-            </tr>
-        </table>
+    <div class="main-container">
+        <div class="category-choice flex justify-center items-center text-white font-bold">
+            <button class="px-5 py-2 rounded-xl text-2xl border-slate-500 border-4 mt-10 mx-1 bg-slate-500"
+                id="all-btn">All</button>
+            <button class="px-5 py-2 rounded-xl text-2xl border-slate-500 border-4 mt-10 mx-1" id="bot-btn">Bot</button>
+            <button class="px-5 py-2 rounded-xl text-2xl border-slate-500 border-4 mt-10 mx-1"
+                id="music-btn">Music</button>
+        </div>
+        <div class="command-list text-white text-2xl my-10 flex flex-col justify-center items-center">
+            <ul class="w-2/5" id="bot-cat">
+                <li class="command-name bg-slate-500 px-5 py-2 rounded-lg hover:scale-105">
+                    <div class=""><span class="font-bold">help - </span>Shows you a help menu</div>
+                    <div class="collapsible hidden justify-between">
+                        <div class="command-usage"><span class="">Usage: /help</div>
+                        <div class="command-aliases">Example: /help</div>
+                    </div>
+                </li>
+                <li class="command-name bg-slate-500 px-5 py-2 my-4 rounded-lg hover:scale-105">
+                    <div class=""><span class="font-bold">invite - </span>Gives you invite link to the
+                        bot
+                    </div>
+                    <div class="collapsible hidden">
+                        <div class="command-usage">Usage: /invite</div>
+                        <div class="command-aliases">Example: /invite</div>
+                    </div>
+                </li>
+                <li class="command-name bg-slate-500 px-5 py-2 my-4 rounded-lg hover:scale-105">
+                    <div class=""><span class="font-bold">ping - </span>Shows ping</div>
+                    <div class="collapsible hidden justify-between">
+                        <div class="command-usage">Usage: /ping</div>
+                        <div class="command-aliases">Example: /ping</div>
+                    </div>
+                </li>
+                <li class="command-name bg-slate-500 px-5 py-2 my-4 rounded-lg hover:scale-105">
+                    <div class=""><span class="font-bold">stats - </span>Shows current statistics about the bot</div>
+                    <div class="collapsible hidden justify-between">
+                        <div class="command-usage">Usage: /stats</div>
+                        <div class="command-aliases">Example: /stats</div>
+                    </div>
+                </li>
+            </ul>
+            <ul class="w-2/5" id="music-cat">
+                <li class="command-name bg-slate-500 px-5 py-2 rounded-lg hover:scale-105">
+                    <div class=""><span class="font-bold">lofi - </span>Starts playing Lo-fi Beats</div>
+                    <div class="collapsible hidden justify-between">
+                        <div class="command-usage">Usage: /lofi</div>
+                        <div class="command-aliases">Example: /lofi</div>
+                    </div>
+                </li>
+                <li class="command-name bg-slate-500 px-5 py-2 my-4 rounded-lg hover:scale-105">
+                    <div class=""><span class="font-bold">nowplaying - </span>Shows the currently playing song</div>
+                    <div class="collapsible hidden justify-between">
+                        <div class="command-usage">Usage: /nowplaying</div>
+                        <div class="command-aliases">Example: /nowplaying</div>
+                    </div>
+                </li>
+                <li class="command-name bg-slate-500 px-5 py-2 my-4 rounded-lg hover:scale-105">
+                    <div class=""><span class="font-bold">queue - </span>Starts playing Lo-fi Beats</div>
+                    <div class="collapsible hidden justify-between">
+                        <div class="command-usage">Usage: /queue</div>
+                        <div class="command-aliases">Example: /queue</div>
+                    </div>
+                </li>
+                <li class="command-name bg-slate-500 px-5 py-2 my-4 rounded-lg hover:scale-105">
+                    <div class=""><span class="font-bold">radio - </span>Plays the given radio station</div>
+                    <div class="collapsible hidden justify-between">
+                        <div class="command-usage">Usage: /radio <code>station:</code> &lt;station name&gt;
+                        </div>
+                        <div class="command-aliases">Example: /radio
+                            <code>station:</code> kalika fm</div>
+                    </div>
+                </li>
+                <li class="command-name bg-slate-500 px-5 py-2 my-4 rounded-lg hover:scale-105">
+                    <div class=""><span class="font-bold">skip - </span>Starts playing Lo-fi Beats</div>
+                    <div class="collapsible hidden justify-between">
+                        <div class="command-usage">Usage: /skip</div>
+                        <div class="command-aliases">Example: /skip</div>
+                    </div>
+                </li>
+                <li class="command-name bg-slate-500 px-5 py-2 my-4 rounded-lg hover:scale-105">
+                    <div class=""><span class="font-bold">stop - </span>Stops the current music session</div>
+                    <div class="collapsible hidden justify-between">
+                        <div class="command-usage">Usage: /stop</div>
+                        <div class="command-aliases">Example: /stop</div>
+                    </div>
+                </li>
+                <li class="command-name bg-slate-500 px-5 py-2 my-4 rounded-lg hover:scale-105">
+                    <div class=""><span class="font-bold">zen - </span>Starts playing Zen radio station</div>
+                    <div class="collapsible hidden justify-between">
+                        <div class="command-usage">Usage: /zen</div>
+                        <div class="command-aliases">Example: /zen</div>
+                    </div>
+                </li>
+            </ul>
+        </div>
     </div>
     <script src="/js/script.js"></script>
 </body>
